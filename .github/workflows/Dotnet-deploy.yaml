@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ['dotnet_dev']
+    runs-on: ['dev']
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
