@@ -21,8 +21,8 @@ jobs:
 
       - name: Restore Dependencies and Run Tests
         run: |
-          dotnet restore "D:/Auth/Authentication/Authentication.csproj"
-          dotnet test "D:/Auth/Authentication/Authentication.csproj"
+          dotnet restore "./Authentication/Authentication.csproj"
+          dotnet test "./Authentication/Authentication.csproj"
         shell: cmd
 
       - name: Build Project
