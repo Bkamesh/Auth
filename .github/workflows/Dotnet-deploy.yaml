@@ -26,7 +26,7 @@ jobs:
         shell: cmd
 
       - name: build
-        run: dotnet build "./Authentication/Authentication.csproj" -c Release -o "D:\\dotnet_build_files"
+        run: dotnet build "./Authentication/Authentication.csproj" -c Release -o "D:\\dotnet_build_file"
         shell: cmd
 
       - name: publish 
