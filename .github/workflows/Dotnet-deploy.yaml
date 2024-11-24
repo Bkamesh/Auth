@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: dev
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
