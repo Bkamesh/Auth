@@ -1,0 +1,33 @@
+name: Project Build QA
+
+on: 
+   push:
+      branches:
+             dev
+    Workflow_dispatch: 
+    schedule:
+      -cron: 30 16 * * *
+
+jobs: 
+  runs-on: ['dev']
+  steps:
+      name: checkout
+      uses: actions/checkout@v4
+        with: 
+          repo: "https://github.com/Bkamesh/Auth.git"
+          ref: dev
+          path: "D:\\path"      
+
+      name: restore 
+      run: | dotnet restore "./Authentication/Authentication.csproj" 
+             dotnet test "./Authentication/Authentication.csproj" 
+      shell: cmd
+
+      name: build
+      run: dotnet build "./Authentication/Authentication.csproj" -c Release -o "D:\\dotnet_build_files"
+      shell: cmd
+
+      name: publish 
+      run: dotnet publish "./Authentication/Authentication.csproj" -c Release -o "D:\\dotnet_publish_files"
+      shell: cmd
+    
