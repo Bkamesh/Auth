@@ -17,7 +17,7 @@ jobs:
         with:
           repository: "Bkamesh/Auth"
           ref: dev
-          path: 'D:/Auth'
+          path: 'Auth'
 
       - name: Restore Dependencies and Run Tests
         run: |
@@ -26,9 +26,9 @@ jobs:
         shell: cmd
 
       - name: Build Project
-        run: dotnet build "D:/Auth/Authentication/Authentication.csproj" -c Release -o "D:/dotnet_build_files"
+        run: dotnet build "./Authentication/Authentication.csproj" -c Release -o "D:/dotnet_build_files"
         shell: cmd
 
       - name: Publish Project
-        run: dotnet publish "D:/Auth/Authentication/Authentication.csproj" -c Release -o "D:/dotnet_publish_files"
+        run: dotnet publish "./Authentication/Authentication.csproj" -c Release -o "D:/dotnet_publish_files"
         shell: cmd
