@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          repository: "Bkamesh/Auth"
+          repository: "https://github.com/Bkamesh/Auth.git"
           ref: dev
           path: 'Auth'
 
