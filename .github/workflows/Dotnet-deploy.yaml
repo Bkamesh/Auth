@@ -1,9 +1,11 @@
-name: Project Build QA 1
+name: Project Build QA 
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "30 16 * * *"
+  push:
+    branches: dev
 jobs:
   build:
     runs-on: ['dev']
