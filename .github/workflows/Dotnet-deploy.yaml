@@ -12,11 +12,12 @@ jobs:
     runs-on: ['dev']
     steps:
       - name: Checkout Code
-        uses: Bkamesh/actions/checkout@v4
+        uses: actions/checkout@v4
         with:
           repository: "https://github.com/Bkamesh/Auth.git"
           ref: dev
           path: 'Auth'
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Restore Dependencies and Run Tests
         run: |
