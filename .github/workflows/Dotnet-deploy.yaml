@@ -15,7 +15,7 @@ jobs:
         with:
           repository: "Bkamesh/Auth"
           ref: dev
-          path: 'Auth'
+          path: 'D:\Auth'
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Restore Dependencies and Run Tests
